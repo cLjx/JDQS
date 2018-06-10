@@ -1,0 +1,38 @@
+<resources>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="app_name">绝地求生</string>
+    <string name="app_version">V 1.000</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="demo_1">\n · 三击关机键启动SOS求生功能后，我们会为您自动开启安全省电功能：
+\n （1）	该功能会将手机屏幕亮度调至最低，并关闭无关后台程序，提高危机情况下手机的续航时间。
+\n （2）	软件同时会为您保留QQ、微信、支付宝等所有可以联系上你的应用，在续航的同时保证您获救的可能性。
+\n\n ·			在未开启SOS求生功能时，您也可以通过单击本界面下方的按钮单独开启安全省电功能。</string>
+    <string name="send_sms">发短信</string>
+    <string name="aid_kmowledge">求救知识</string>
+    <string name="light">手电筒</string>
+    <string name="record">录音</string>
+    <string name="edit">编辑</string>
+    <string name="back">〈  返回</string>
+    <string name="preserve">修改</string>
+    <string name="add">添加</string>
+    <string name="sendee">联系人</string>
+    <string name="send">发送</string>
+    <string name="cancel">取消</string>
+    <string name="selectAll">全选</string>
+    <string name="cancel_selectAll">取消全选</string>
+    <string name="delete">删除</string>
+    <string name="ok">确定</string>
+    <string name="info">你好，我遇到危险了，发短信向你求救。</string>
+
+    <string name="gpsfollow">追随</string>
+    <string name="gpslocate">定位</string>
+    <string name="gpsrotate">旋转</string>
+    <string name="error_network">搜索失败,请检查网络连接！</string>
+    <string name="error_key">key验证无效！</string>
+    <string name="error_other">未知错误，请稍后重试!错误码为</string>
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+</resources>

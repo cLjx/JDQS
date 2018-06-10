@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/title_bar"
+    android:orientation="vertical" >
+    
+    <!-- android:background="#eee" -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp">
+        <TextView
+            android:id="@+id/wodexinxi"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/uimain_user"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="	游客"
+            android:textColor="#ea8010"
+            android:textSize="22sp"
+            android:textStyle="bold" />  
+    </LinearLayout>
+    
+ <TextView
+        android:id="@+id/wodeqianming"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"               
+        android:clickable="true"                   
+        android:drawableLeft="@drawable/qianming"
+        android:paddingLeft="10dp"
+        android:text="  我的签名"
+        android:textColor="#fff"
+        android:textSize="14sp"/>
+    
+</LinearLayout>

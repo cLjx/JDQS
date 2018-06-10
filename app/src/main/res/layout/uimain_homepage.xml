@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/homepage_layout">
+
+
+    <Button
+        android:id="@+id/sos"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:background="#0fff"
+        android:text="打开SOS"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="219dp" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="一个easy的求生软件：\n\n隐藏功能：\n双击电源键/说出特定指令 均可发送紧急短信 \n\n指令包括：逗你玩的，口袋没钱，喊你一声。"
+        android:layout_marginBottom="17dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+    
+</RelativeLayout>
