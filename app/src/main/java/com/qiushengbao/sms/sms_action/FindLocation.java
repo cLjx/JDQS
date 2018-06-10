@@ -14,8 +14,8 @@ public class FindLocation {
 	// amap
 	private LocationManagerProxy aMapManager;
 	public String locationString = null;
-	public String locationStringLatitude = null;
-	public String locationStringLongitude = null;
+	public static String locationStringLatitude = null;
+	public static String locationStringLongitude = null;
 	public String locationStringAddress = null;
 	public String locationStringAccuracy = null;
 
@@ -75,23 +75,6 @@ public class FindLocation {
 					cityCode = locBundle.getString("citycode");
 					desc = locBundle.getString("desc");
 				}
-//				String str1 = ("定位成功:(经度" + geoLng + ",纬度" + geoLat + ")"
-//
-//				+ "\n精    度    :" + location.getAccuracy() + "米"
-//
-//				+ "\n定位方式:" + location.getProvider() + "\n定位时间:"
-//
-//				+ new Date(location.getTime()).toLocaleString() + "\n城市编码:"
-//
-//				+ cityCode + "\n位置描述:" + desc +
-//
-//				"\n省:" + location.getProvince() +
-//
-//				"\n市:" + location.getCity() +
-//
-//				"\n区(县):" + location.getDistrict() +
-//
-//				"\n区域编码:" + location.getAdCode());
 				StringBuilder str = new StringBuilder();
 				str.append("http://m.amap.com/?q=");
 				str.append(location.getLatitude());// location.getLatitude()

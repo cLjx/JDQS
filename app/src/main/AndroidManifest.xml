@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.qsb.qsb2"
+    package="com.example.qsb.holder"
     android:versionCode="2"
     android:versionName="2.0" >
 
@@ -21,7 +21,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
-     
+
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -32,7 +32,7 @@
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-     
+
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -51,7 +51,7 @@
 
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="576b06bb89c97334b287599cd389905e" />
+            android:value="c8c8e00c7d6072168e4551d6195f41ee" />
 
         <activity
             android:name="com.qiushengbao.start.Welcome"
@@ -75,12 +75,6 @@
         <activity android:name="com.qiushengbao.sms.sms_action.MainSMS" >
         </activity>
 
-        <!-- 上传位置信息 -->
-        <service android:name="com.qiushengbao.sms.service.UpdataLocation" >
-        </service>
-        <!-- 获得位置信息 -->
-        <service android:name="com.qiushengbao.sms.service.OperationLocaion" >
-        </service>
         <service android:name="com.qiushengbao.sms.service.OFF_SendSMS" >
         </service>
         <service android:name="com.qiushengbao.sms.service.SendSMS" >
@@ -117,15 +111,15 @@
         <!-- 请填写应用实际的APP_ID -->
         <meta-data
             android:name="com.baidu.speech.APP_ID"
-            android:value="9371561" />
+            android:value="11378430" />
         <!-- 请填写应用实际的API_KEY -->
         <meta-data
             android:name="com.baidu.speech.API_KEY"
-            android:value="WIwdr2tEURizU9OT2LTlEbGH" />
+            android:value="5BnycKveNURz9hsKrGt9wlcl" />
         <!-- 请填写应用实际的SECRET_KEY -->
         <meta-data
             android:name="com.baidu.speech.SECRET_KEY"
-            android:value="354dd31a3e73ae362ed02f4fbfe69953" />
+            android:value="zRWNpSn34p8AzaAaWD5GRU8a1DvfOLI8" />
 
         <service
             android:name="com.baidu.speech.VoiceRecognitionService"

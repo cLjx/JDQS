@@ -1,4 +1,4 @@
-package com.example.qsb.qsb2;
+package com.example.qsb.holder;
 
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;

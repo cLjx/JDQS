@@ -16,10 +16,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.qsb.qsb2.BaseBaseActivity;
-import com.example.qsb.qsb2.R;
+import com.example.qsb.holder.BaseBaseActivity;
+import com.example.qsb.holder.R;
 import com.qiushengbao.sms.service.OFF_SendSMS;
 import com.qiushengbao.sms.service.ServiceForGetContacts;
 import com.qiushengbao.sms.sms_action.ContactInfo;
@@ -42,6 +43,9 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
 	static List<ContactInfo> contacts = null;
 	Intent intent_sendSMS_service = null;
+	boolean intent_sendSMS_Service_started = false;
+
+	TextView info = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,11 +62,14 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 		drawer.addDrawerListener(toggle);
 		toggle.syncState();
 
+		//显示提示信息的
+		this.info = (TextView) findViewById(R.id.info);
 		this.contacts = new ArrayList<>();
         intent_sendSMS_service = new Intent(this, OFF_SendSMS.class);
         sos.setOnClickListener(this);
         //TODO 6.0 permission
 		testPermission();
+
 	}
 
 
@@ -148,8 +155,22 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
+		showInfo();
         readSQL();
 		TheContactsWillSend.setContacts(contacts);
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				if(!intent_sendSMS_Service_started) {
+					Homepage.this.startService(intent_sendSMS_service);
+					intent_sendSMS_Service_started = true;
+				}
+			}
+		}).start();
+	}
+
+	private void showInfo() {
+		this.info.setText(intent_sendSMS_Service_started+" -- "+ FindLocation.locationStringLatitude +" "+FindLocation.locationStringLongitude);
 	}
 
 
@@ -161,9 +182,14 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
             findedLocation = new FindLocation(this);
         }
         if(str.equals("sms")) {
-            if (intent_sendSMS_service != null)
-                stopService(intent_sendSMS_service);
-            startService(intent_sendSMS_service);
+//            if (intent_sendSMS_service != null && intent_sendSMS_Service_started) {
+//				stopService(intent_sendSMS_service);
+//				intent_sendSMS_Service_started = false;
+//			}
+			if(!intent_sendSMS_Service_started) {
+				startService(intent_sendSMS_service);
+				intent_sendSMS_Service_started = true;
+			}
         }
 	}
 
@@ -214,11 +240,16 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         // TODO 纯属乱搞
 //
+		if(grantResults.length<1)
+			return;
 //        doPermission("contacts");
 //        doPermission("location");
 //        doPermission("sms");
+//		startService(intent_sendSMS_service);
+//		intent_sendSMS_Service_started = true;
 //        if(2>1)
 //            return;
+
 		if (requestCode == 1) {
 			if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 				doPermission("contacts");
@@ -227,7 +258,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 			}
 			return;
 		}
-        else if (requestCode == 2) {
+        if (requestCode == 2) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 doPermission("location");
             } else {
@@ -235,7 +266,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
             }
             return;
         }
-        else if (requestCode == 3) {
+        if (requestCode == 3) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 doPermission("sms");
             } else {

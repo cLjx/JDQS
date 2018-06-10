@@ -1,4 +1,4 @@
-package com.example.qsb.qsb2;
+package com.example.qsb.holder;
 
 import org.junit.Test;
 

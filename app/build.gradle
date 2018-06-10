@@ -6,7 +6,7 @@ android {
     /*为了so文件*/
     sourceSets.main.jniLibs.srcDirs = ['libs']
     defaultConfig {
-        applicationId "com.example.qsb.qsb2"
+        applicationId "com.example.qsb.holder"
         minSdkVersion 17
         targetSdkVersion 25
         versionCode 1

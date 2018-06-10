@@ -1,12 +1,9 @@
-package com.example.qsb.qsb2;
+package com.example.qsb.holder;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import com.example.qsb.qsb2.R;
 
 
 public class MainActivity extends AppCompatActivity {

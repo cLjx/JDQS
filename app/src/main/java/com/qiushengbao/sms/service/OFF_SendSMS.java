@@ -21,8 +21,8 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.qsb.qsb2.BaseBaseActivity;
-import com.example.qsb.qsb2.R;
+import com.example.qsb.holder.BaseBaseActivity;
+import com.example.qsb.holder.R;
 import com.qiushengbao.sms.sms_action.TheContactsWillSend;
 import com.qiushengbao.speak.MyWakeUp;
 
@@ -55,19 +55,7 @@ public class OFF_SendSMS extends Service implements SensorEventListener{
 	 */
 	final private int[] times = {200,500,1000,1500,2000,2500};
 	final private double[] speedsDoubles = {0.5,2.5,3,4,5,6,7,8,9,9.5};
-//    public static  int newTimeForSpeed = 4;
-//    public static  int newSpeedForSpeed = 4;
 
-
-//    private static final ThreadLocal<Boolean> ssssstopForThread = new ThreadLocal<>();
-//    private static final ThreadLocal<Boolean > extendThreadForSlipingSendSMS = new ThreadLocal<>();
-//    private static final ThreadLocal<Integer> timeForSlipingSendSMS = new ThreadLocal<>();
-//    static {
-//        ssssstopForThread.set(false);
-//        extendThreadForSlipingSendSMS.set(false);
-//        timeForSlipingSendSMS.set(30);
-//    }
-    
     @Override
     public IBinder onBind(Intent intent) {
         return null;

@@ -22,8 +22,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.qsb.qsb2.BaseBaseActivity;
-import com.example.qsb.qsb2.R;
+import com.example.qsb.holder.BaseBaseActivity;
+import com.example.qsb.holder.R;
 import com.qiushengbao.sms.service.MainSMS_write_Service;
 import com.qiushengbao.sms.service.SendSMS;
 import com.qiushengbao.sms.sql.Contacts_SQL;
@@ -180,7 +180,7 @@ public class MainSMS extends Activity {
         Pattern p = Pattern.compile("1\\d{10}");
         Matcher m = p.matcher( sendee.getText().toString());
         if(m.matches()) {
-            ContactInfo contact = new ContactInfo("name", sendee.getText().toString(), true);
+            ContactInfo contact = new ContactInfo("Tel. ", sendee.getText().toString(), true);
             this.contacts.add(contact);
             //显示到viewList中
             showInCallList();

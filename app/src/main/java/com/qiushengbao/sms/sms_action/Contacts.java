@@ -16,8 +16,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.qsb.qsb2.BaseBaseActivity;
-import com.example.qsb.qsb2.R;
+import com.example.qsb.holder.BaseBaseActivity;
+import com.example.qsb.holder.R;
 
 import java.io.Serializable;
 import java.util.ArrayList;
